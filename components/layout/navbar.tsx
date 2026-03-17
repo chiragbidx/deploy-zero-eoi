@@ -26,11 +26,7 @@ import { getHomeContent } from "@/content/home";
 
 const { navbar } = getHomeContent();
 
-interface NavbarProps {
-  isLoggedIn?: boolean;
-}
-
-export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
@@ -74,33 +70,6 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
                     <Link href={href}>{label}</Link>
                   </Button>
                 ))}
-                {isLoggedIn ? (
-                  <Button
-                    onClick={() => setIsOpen(false)}
-                    asChild
-                    className="justify-start text-base"
-                  >
-                    <Link href="/dashboard">{navbar.dashboardLabel}</Link>
-                  </Button>
-                ) : (
-                  <>
-                    <Button
-                      onClick={() => setIsOpen(false)}
-                      asChild
-                      variant="ghost"
-                      className="justify-start text-base"
-                    >
-                      <Link href="/auth#signin">{navbar.signInLabel}</Link>
-                    </Button>
-                    <Button
-                      onClick={() => setIsOpen(false)}
-                      asChild
-                      className="justify-start text-base"
-                    >
-                      <Link href="/auth#signup">{navbar.signUpLabel}</Link>
-                    </Button>
-                  </>
-                )}
               </div>
             </div>
 
@@ -161,31 +130,18 @@ export const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
       </NavigationMenu>
 
       <div className="hidden lg:flex items-center gap-2">
-        {isLoggedIn ? (
-          <Button asChild size="sm">
-            <Link href="/dashboard">{navbar.dashboardLabel}</Link>
-          </Button>
-        ) : (
-          <>
-            <Button asChild size="sm" variant="ghost">
-              <Link href="/auth#signin">{navbar.signInLabel}</Link>
-            </Button>
-            <Button asChild size="sm">
-              <Link href="/auth#signup">{navbar.signUpLabel}</Link>
-            </Button>
-          </>
-        )}
         <ThemeToggle mode="inline" className="w-auto justify-center" />
-
-        <Button asChild size="sm" variant="ghost" aria-label={navbar.githubLink.ariaLabel}>
-          <Link
-            aria-label={navbar.githubLink.ariaLabel}
-            href={navbar.githubLink.href}
-            target="_blank"
-          >
-            <Github className="size-5" />
-          </Link>
-        </Button>
+        {navbar.githubLink.href && (
+          <Button asChild size="sm" variant="ghost" aria-label={navbar.githubLink.ariaLabel}>
+            <Link
+              aria-label={navbar.githubLink.ariaLabel}
+              href={navbar.githubLink.href}
+              target="_blank"
+            >
+              <Github className="size-5" />
+            </Link>
+          </Button>
+        )}
       </div>
     </header>
   );
