@@ -39,7 +39,7 @@ export const defaultHomeContent: HomeContent = {
     titleHighlight: "CRM",
     titleAfter: "journey with confidence",
     subtitle:
-      "LeadSync gives you a head start with a beautiful, production-ready Next.js boilerplate—brand it, extend it, ship it. No backend, no database, no auth by default.",
+      "LeadSync gives you a head start with a beautiful, production-ready Next.js boilerplate—brand it, extend it, ship it. Drizzle ORM, PostgreSQL, passwordless email auth, and robust dashboard built in.",
     primaryCta: { label: "See Features", href: "#features" },
     secondaryCta: { label: "Contact Team", href: "#contact" },
     heroImageLight: "/hero-image-light.jpeg",
@@ -47,7 +47,6 @@ export const defaultHomeContent: HomeContent = {
     heroImageAlt: "LeadSync CRM React starter preview",
   },
 
-  // ── Sponsors ─────────────────────────────────────────────────────────────
   sponsors: {
     heading: "Built with trusted tools",
     items: [
@@ -61,12 +60,11 @@ export const defaultHomeContent: HomeContent = {
     ],
   },
 
-  // ── Benefits ─────────────────────────────────────────────────────────────
   benefits: {
     eyebrow: "Why LeadSync",
     heading: "A minimal, modern CRM starter",
     description:
-      "Optimized for teams who want a rock-solid, customizable Next.js front end but prefer to bring their own backend. Extend effortlessly as you grow.",
+      "Optimized for teams who want a rock-solid, customizable Next.js front end with real authentication, dashboard, team management, and live email flows.",
     items: [
       {
         icon: "Blocks",
@@ -82,9 +80,9 @@ export const defaultHomeContent: HomeContent = {
       },
       {
         icon: "Wallet",
-        title: "No Lock-In",
+        title: "Secure Auth, Real DB",
         description:
-          "No backend or auth by default. Work with your API layer, hosted DB, or platform stack.",
+          "Credentials auth, passwordless flows, and live database persistence out of the box.",
       },
       {
         icon: "Sparkle",
@@ -95,12 +93,11 @@ export const defaultHomeContent: HomeContent = {
     ],
   },
 
-  // ── Features ─────────────────────────────────────────────────────────────
   features: {
     eyebrow: "Features",
     heading: "Everything you need to start strong",
     subtitle:
-      "This boilerplate ships with no-frills, ready-to-use sections and no complex backend, so you can kick off internal CRM projects immediately.",
+      "Template ships with ready-to-use, database-backed email/password auth, dashboard, team system, and production-grade flows. Invite real users, manage teams, and extend as you grow.",
     items: [
       {
         icon: "TabletSmartphone",
@@ -109,47 +106,46 @@ export const defaultHomeContent: HomeContent = {
       },
       {
         icon: "BadgeCheck",
-        title: "SEO-Ready",
+        title: "Production Auth",
         description:
-          "Structured meta, semantic HTML, and lightning-fast Lighthouse scores.",
+          "End-to-end signup/login, email verification, forgot/reset, session security.",
       },
       {
         icon: "Goal",
-        title: "Easy Theming",
+        title: "Live Email Flows",
         description:
-          "Switch from light to dark with one click, or build your own palette.",
+          "SendGrid integration for verification, passwordless, invitations—all real.",
       },
       {
         icon: "PictureInPicture",
-        title: "Copy-Driven Sections",
+        title: "Ready Dashboard",
         description:
-          "Landing, features, team, pricing, contact, and more—editable via code for now.",
+          "Team management, invite flows, member roles—all backed by Drizzle/Postgres.",
       },
       {
         icon: "MousePointerClick",
-        title: "Works With Your API",
+        title: "Extensible",
         description:
-          "Hook up any backend, CRM engine, or database when you’re ready.",
+          "Plug in features, expand tables, or connect to your API/backend.",
       },
       {
         icon: "Newspaper",
         title: "Deploy Instantly",
         description:
-          "One-click deploy to Vercel or Railway for dev; Dockerfile included if you need it.",
+          "One-click deploy to Vercel or Railway for dev/prod. Ready to go now.",
       },
     ],
   },
 
-  // ── Services ─────────────────────────────────────────────────────────────
   services: {
     eyebrow: "Services",
     heading: "Your foundation, your way",
     subtitle:
-      "LeadSync gives you everything you need and nothing you don’t. Just add your backend.",
+      "LeadSync gives you everything you need and nothing you don’t. Backend and database built-in—just extend for your next use case.",
     items: [
       {
         title: "Brand-Ready Template",
-        description: "Rebrand every section for your CRM or vertical SaaS.",
+        description: "Designed for CRM and SaaS—easy to rebrand and extend. Powered by Chirag Dodiya.",
         pro: false,
       },
       {
@@ -172,7 +168,6 @@ export const defaultHomeContent: HomeContent = {
     ],
   },
 
-  // ── Testimonials ─────────────────────────────────────────────────────────
   testimonials: {
     eyebrow: "Testimonials",
     heading: "Loved by developers and product teams",
@@ -212,7 +207,6 @@ export const defaultHomeContent: HomeContent = {
     ],
   },
 
-  // ── Team ─────────────────────────────────────────────────────────────────
   team: {
     eyebrow: "Team",
     heading: "Meet the LeadSync builders",
@@ -230,19 +224,18 @@ export const defaultHomeContent: HomeContent = {
     ],
   },
 
-  // ── Pricing ──────────────────────────────────────────────────────────────
   pricing: {
     eyebrow: "Pricing",
     heading: "One simple open source plan",
     subtitle:
-      "Download and use forever. If you want help with customization, contact us.",
+      "Download and use forever. For custom integrations or commercial help, contact Chirag.",
     priceSuffix: "",
     plans: [
       {
         title: "Open Source",
         popular: true,
         price: 0,
-        description: "Free template with modern stacks and clean sections.",
+        description: "Full-featured stack, modern code, extensible for any team.",
         buttonText: "Download Starter",
         benefits: [
           "Full source code",
@@ -255,24 +248,23 @@ export const defaultHomeContent: HomeContent = {
         title: "Custom Deployment",
         popular: false,
         price: 499,
-        description: "Get help with custom branding, section work, or backend/API setup.",
+        description: "Setup, branding, backend, or advanced auth by Chirag.",
         buttonText: "Contact Chirag",
         benefits: [
           "Personalization",
-          "Backend/API wiring",
-          "Auth integration",
-          "Extended support",
+          "Backend/auth wiring",
+          "Custom features",
+          "Continued support",
         ],
       },
     ],
   },
 
-  // ── Contact ──────────────────────────────────────────────────────────────
   contact: {
     eyebrow: "Contact",
     heading: "Talk to the LeadSync team",
     description:
-      "Questions about setup, deployment, or custom integration? Reach out and we'll get back to you soon.",
+      "Questions about setup, deployment, or integrations? Directly reach out to the founder for the fastest response.",
     mailtoAddress: "chirag@bidx.ai",
     info: {
       address: { label: "Find us", value: "Remote, global" },
@@ -284,7 +276,6 @@ export const defaultHomeContent: HomeContent = {
     formSubmitLabel: "Send message",
   },
 
-  // ── FAQ ──────────────────────────────────────────────────────────────────
   faq: {
     eyebrow: "FAQ",
     heading: "Questions? Start here",
@@ -292,12 +283,12 @@ export const defaultHomeContent: HomeContent = {
       {
         question: "What makes LeadSync different?",
         answer:
-          "It’s super-light and grows with you: no forced backend, database, or auth. You’re in control.",
+          "Built on real, production-backed flows. Auth, DB, team system and extensibility—all in one.",
       },
       {
         question: "Can I use this in production?",
         answer:
-          "Yes! The stack is ready for real apps—and encourages you to ship fast.",
+          "Yes! This template is made for real SaaS, CRM, and team portals—no fake UI or mockups.",
       },
       {
         question: "How is content managed?",
@@ -307,17 +298,16 @@ export const defaultHomeContent: HomeContent = {
       {
         question: "Does it include auth and DB wiring?",
         answer:
-          "No, by design. Set up your preferred backend/db when ready or request integration help.",
+          "Yes! Everything from signup/signin to reset and team flows, database included.",
       },
       {
         question: "Do you offer support or custom changes?",
         answer:
-          "For core issues, open a GitHub ticket. For commercial help, reach out to Chirag Dodiya directly.",
+          "For bugs, open a GitHub issue. For commercial help or custom features, contact Chirag Dodiya directly.",
       },
     ],
   },
 
-  // ── Footer ───────────────────────────────────────────────────────────────
   footer: {
     brandName: "LeadSync",
     columns: [
@@ -353,7 +343,6 @@ export const defaultHomeContent: HomeContent = {
     attribution: { label: "Powered by Next.js", href: "https://nextjs.org" },
   },
 
-  // ── Navbar ───────────────────────────────────────────────────────────────
   navbar: {
     brandName: "LeadSync",
     routes: [
