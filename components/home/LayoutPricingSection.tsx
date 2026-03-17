@@ -46,8 +46,14 @@ export const LayoutPricingSection = () => {
                 </CardDescription>
 
                 <div>
-                  <span className="text-3xl font-bold">${price}</span>
-                  <span className="text-muted-foreground"> {pricing.priceSuffix}</span>
+                  {price === 0 ? (
+                    <span className="text-3xl font-bold">Free</span>
+                  ) : (
+                    <>
+                      <span className="text-3xl font-bold">${price}</span>
+                      <span className="text-muted-foreground"> {pricing.priceSuffix}</span>
+                    </>
+                  )}
                 </div>
               </CardHeader>
 
