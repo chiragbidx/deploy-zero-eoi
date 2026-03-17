@@ -55,7 +55,7 @@ export const LayoutContactSection = () => {
     const { firstName, lastName, email, subject, message } = values;
     console.log(values);
 
-    const mailToLink = `mailto:${contact.mailtoAddress}?subject=${subject}&body=Hello, I am ${firstName} ${lastName}. My email is ${email}. %0D%0A${message}`;
+    const mailToLink = `mailto:${contact.mailtoAddress}?subject=${encodeURIComponent(subject)}&body=Hello, I am ${firstName} ${lastName}. My email is ${email}. %0D%0A${encodeURIComponent(message)}`;
 
     window.location.assign(mailToLink);
   }
@@ -84,34 +84,27 @@ export const LayoutContactSection = () => {
                 <Building2 />
                 <div className="font-bold">{contact.info.address.label}</div>
               </div>
-
               <div>{contact.info.address.value}</div>
             </div>
-
             <div>
               <div className="flex gap-2 mb-1">
                 <Phone />
                 <div className="font-bold">{contact.info.phone.label}</div>
               </div>
-
               <div>{contact.info.phone.value}</div>
             </div>
-
             <div>
               <div className="flex gap-2 mb-1">
                 <Mail />
                 <div className="font-bold">{contact.info.email.label}</div>
               </div>
-
               <div>{contact.info.email.value}</div>
             </div>
-
             <div>
               <div className="flex gap-2">
                 <Clock />
                 <div className="font-bold">{contact.info.hours.label}</div>
               </div>
-
               <div>
                 {hoursLines.map((line, idx) => (
                   <div key={idx}>{line}</div>
@@ -137,7 +130,7 @@ export const LayoutContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>First Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Leopoldo" {...field} />
+                          <Input placeholder="Chirag" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -150,7 +143,7 @@ export const LayoutContactSection = () => {
                       <FormItem className="w-full">
                         <FormLabel>Last Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Miranda" {...field} />
+                          <Input placeholder="Dodiya" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -218,7 +211,7 @@ export const LayoutContactSection = () => {
                         <FormControl>
                           <Textarea
                             rows={5}
-                            placeholder="Tell us about your SaaS idea, stage, and timeline..."
+                            placeholder="Tell us about your CRM project, goals, and timeline..."
                             className="resize-none"
                             {...field}
                           />
@@ -234,7 +227,6 @@ export const LayoutContactSection = () => {
               </form>
             </Form>
           </CardContent>
-
           <CardFooter></CardFooter>
         </Card>
       </section>
