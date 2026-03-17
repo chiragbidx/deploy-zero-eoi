@@ -5,7 +5,12 @@ if (apiKey) {
   sgMail.setApiKey(apiKey);
 }
 
-const fromEmail = process.env.SENDGRID_FROM_EMAIL ?? "noreply@example.com";
+// Set Chirag Dodiya as the sender for all emails, per owner info
+const fromEmail = process.env.SENDGRID_FROM_EMAIL ?? "chirag@bidx.ai";
+const from = {
+  email: fromEmail,
+  name: "Chirag Dodiya (LeadSync)"
+};
 
 export async function sendEmail(
   to: string,
@@ -18,7 +23,7 @@ export async function sendEmail(
   }
 
   try {
-    await sgMail.send({ to, from: fromEmail, subject, html });
+    await sgMail.send({ to, from, subject, html });
     return { success: true };
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown SendGrid error";
