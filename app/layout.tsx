@@ -8,8 +8,8 @@ import ErrorReporter from "../components/ErrorReporter";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Panda - SaaS App Builder Starter",
-  description: "Production-ready SaaS app builder starter template with modern UI, dark mode, and launch-ready sections.",
+  title: "LeadSync - Minimal CRM Next.js Starter",
+  description: "LeadSync — A lightweight, production-grade Next.js boilerplate for internal CRM projects. Modern stack, ready-to-extend, no backend or auth bundled.",
 };
 
 export default function RootLayout({
@@ -24,27 +24,29 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}
     >
       <head>
-        {/*
-          PANDA ELEMENT SELECTION SCRIPT
-          ===============================
-          Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
-          Metadata captured: url, width, height, alt
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        */}
         <Script
           src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js"
           strategy="afterInteractive"
         />
-        {/*
-          PANDA BRANDING SCRIPT
-          ====================
-          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        */}
         <Script
           src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js"
           strategy="afterInteractive"
         />
+        <meta name="theme-color" content="#172836" />
+        <meta name="title" content="LeadSync - Minimal CRM Next.js Starter" />
+        <meta
+          name="description"
+          content="LeadSync — A lightweight, production-grade Next.js boilerplate for internal CRM projects. Modern stack, ready-to-extend, no backend or auth bundled."
+        />
+        <meta property="og:title" content="LeadSync CRM Boilerplate" />
+        <meta
+          property="og:description"
+          content="Launch your CRM fast with LeadSync — a modern Next.js starter, bulletproof design, zero lock-in, and room to evolve."
+        />
+        <meta property="og:url" content="https://leadsync.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="LeadSync" />
+        {/* Place any favicon or manifest links here if needed */}
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
