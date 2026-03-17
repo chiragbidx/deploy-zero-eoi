@@ -22,7 +22,7 @@ export const LayoutHeroSection = () => {
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <h1>
               {hero.titleBefore}
-              <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+              <span className="text-transparent px-2 bg-gradient-to-r from-[#8896ff] to-primary bg-clip-text">
                 {hero.titleHighlight}
               </span>
               {hero.titleAfter}
