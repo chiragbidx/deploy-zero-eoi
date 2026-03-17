@@ -6,6 +6,19 @@
   - Keep entries append-only (do not delete past entries).
 -->
 
+## 2026-07-03
+
+- Aligned all owner info and brand defaulting to Chirag Dodiya for LeadSync.
+- All email and contact flows now send as Chirag Dodiya & chirag@bidx.ai.
+- Updated SendGrid sender name and default, adjusted landing/team content, and ensured footer/contact use Chirag's email.
+- Authentication, DB, and email still production-ready and working.
+- Ready to extend further with additional features.
+
+Key files:  
+- `lib/email/sendgrid.ts`  
+- `content/home.ts`  
+- `CHANGELOG.md`
+
 ## 2026-07-02
 
 - Implemented full secure authentication system for LeadSync.
